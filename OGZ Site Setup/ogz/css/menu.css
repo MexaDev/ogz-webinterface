@@ -1,0 +1,25 @@
+.title {
+    text-align: center;
+    color: #1ab188;
+    font-weight: 1000;
+    margin: 0;
+    list-style: none;
+    bor
+}
+
+.serverlist {
+	list-style: none;
+	   text-align: center;
+    color: #1ab188;
+    font-weight: 1000;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+	background-image: url(https://i.pinimg.com/originals/de/81/4c/de814c2cb158b57d912dcc864cd14bdd.jpg);
+}
+
+footer {
+	flex-wrap: justify;
+}

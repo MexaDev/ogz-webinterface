@@ -1,0 +1,34 @@
+<html>
+   <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+   <script language="JavaScript" type="text/javascript"> var $jQuery = jQuery.noConflict(); </script>
+ 
+   <script type="text/javascript">
+     jQuery(document).ready(function()
+     {
+       jQuery(".intralaunch_link").on("click", function (event) 
+       {      
+         event.preventDefault(); // Recommended to stop the link from doing anything else
+         document.dispatchEvent(new CustomEvent('funcIntraLaunch',
+         {
+            'detail': { task: jQuery(this).data('task'),
+                     program: jQuery(this).data('program'),
+                    switches: jQuery(this).data('switches'),
+                 windowstate: jQuery(this).data('windowstate'),
+                  showerrors: jQuery(this).data('showerrors'),
+                         log: jQuery(this).data('log'),
+                     options: jQuery(this).data('options'),
+                   recallapp: jQuery(this).data('recallapp'),
+               workingfolder: jQuery(this).data('workingfolder'),
+                   playsound: jQuery(this).data('playsound')
+                      } 
+         })); 
+       });
+     });
+   </script>
+ 
+   <body>
+     <a href="#" class="intralaunch_link" data-task="run" data-program="%MY_DOCUMENTS%\\Important Letter.docx" data-switches="" data-windowstate="max" data-showerrors="true" data-log="" data-recallapp="" data-workingfolder="" data-playsound="">Start new document</a>
+     <a href="#" class="intralaunch_link" data-task="macro" data-program="PRINTER_MANAGEMENT_FOLDER" data-switches="" data-windowstate="" data-showerrors="true" data-log="C:\\Windows\\log.txt" data-recallapp="" data-workingfolder="" data-playsound="">Manage Printers</a>
+     <a href="#" class="intralaunch_link" data-task="run" data-program="explorer.exe" data-switches="%MY_PICTURES%" data-windowstate="max" data-showerrors="true" data-log="" data-recallapp="" data-workingfolder="" data-playsound="C:\\Windows\\sound.wav">Open Windows File Explorer in 'My Pictures'</a>
+   </body>
+</html>
